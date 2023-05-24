@@ -9,6 +9,11 @@ jobs:
       matrix:
         dotnet-version: [ '6.0.x' ]
     
+    env:
+      Solution_Name: BaseRPG/BaseRPG.sln
+      Test_Project_Path: BaseRPG/BaseRPGTests/BaseRPGTests.csproj
+      Project_Path: BaseRPG/BaseRPG/BaseRPG.csproj
+
     steps:
       - uses: actions/checkout@v3
       - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
@@ -24,8 +29,8 @@ jobs:
       - name: Install packages
         run: dotnet restore
       - name: Build
-        run: dotnet build BaseRPG
+        run: dotnet build ${{ env.Project_Path }}
       - name: Test
-        run: dotnet test BaseRPG
+        run: dotnet test ${{ env.Test_Project_Path }}
         
 
