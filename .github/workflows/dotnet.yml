@@ -24,8 +24,8 @@ jobs:
       - name: Install packages
         run: dotnet restore
       - name: Build
-        run: dotnet build
+        run: dotnet build BaseRPG
       - name: Test
-        run: dotnet test
+        run: dotnet test BaseRPG
         
 
