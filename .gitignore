@@ -1,5 +1,6 @@
-/BaseRPG/.vs/
-/BaseRPG/BaseRPG/bin/
-/BaseRPG/BaseRPG/obj/
-/BaseRPG/BaseRPGTests/bin/
-/BaseRPG/BaseRPGTests/obj/
+BaseRPG/.vs
+BaseRPG/.idea
+BaseRPG/BaseRPG/bin
+BaseRPG/BaseRPG/obj
+BaseRPG/BaseRPGTests/bin
+BaseRPG/BaseRPGTests/obj
