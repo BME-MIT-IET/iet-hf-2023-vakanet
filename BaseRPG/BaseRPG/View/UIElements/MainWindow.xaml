@@ -1,0 +1,35 @@
+﻿<Window
+    x:Class="BaseRPG.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BaseRPG"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
+    xmlns:windows="using:BaseRPG.View.UIElements" xmlns:inventory="using:BaseRPG.View.UIElements.Inventory"
+    mc:Ignorable="d"
+    >
+
+    <Grid
+        
+        KeyDown="KeyDown"
+        KeyUp="KeyUp">
+        <Canvas
+        x:Name = "mainCanvas"
+        PointerPressed="PointerPressed"
+        PointerReleased="PointerReleased"
+        PointerMoved="PointerMoved"
+        >
+            <canvas:CanvasVirtualControl
+            x:Name="canvas"
+            RegionsInvalidated="canvas_Draw"
+            CreateResources="canvas_CreateResources"
+            Visibility="Visible"
+            />
+            
+        </Canvas>
+        
+        <windows:Hud VerticalAlignment="Bottom" WindowButtonClicked="hud_WindowButtonClicked"  x:Name="hud"></windows:Hud>
+    </Grid>
+    
+</Window>

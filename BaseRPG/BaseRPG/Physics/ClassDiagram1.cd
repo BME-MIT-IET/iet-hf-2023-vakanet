@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="BaseRPG.Physics.TwoDimensional.CollisionNotifier2D">
+    <Position X="1.75" Y="1.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAgAACABAAAAAAAAAA=</HashCode>
+      <FileName>Physics\TwoDimensional\CollisionNotifier2D.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="collisionObjects" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BaseRPG.Physics.TwoDimensional.Movement.MovementManager2D">
+    <Position X="0.75" Y="10.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAIAAAAAkAAAAIAAAAgEAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Physics\TwoDimensional\Movement\MovementManager2D.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="lastMovement" />
+      <Field Name="position" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BaseRPG.Physics.TwoDimensional.Movement.PositionUnit2D" Collapsed="true">
+    <Position X="5.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAgAAAAIAA=</HashCode>
+      <FileName>Physics\TwoDimensional\Movement\PositionUnit2D.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.251" />
+  </Class>
+  <Class Name="BaseRPG.Physics.TwoDimensional.Collision.Polygon">
+    <Position X="6.25" Y="4.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIECAAACAmAAAAAAABAAAAgAAAAAACAAQAAoAAAA=</HashCode>
+      <FileName>Physics\TwoDimensional\Collision\Polygon.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Struct Name="BaseRPG.Physics.TwoDimensional.Movement.MovementUnit2D">
+    <Position X="8" Y="10.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAEAAAAAAIAAACAAAAAAAAAAAAgAAAAABA=</HashCode>
+      <FileName>Physics\TwoDimensional\Movement\MovementUnit2D.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Struct>
+  <Interface Name="BaseRPG.Physics.TwoDimensional.Collision.IShape2D">
+    <Position X="6.75" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAECAAACAEAAAAAAAAAAAAgAAAAAACAAQAAIAAAA=</HashCode>
+      <FileName>Physics\TwoDimensional\Collision\IShape2D.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BaseRPG.Model.Interfaces.Movement.IMovementUnit" Collapsed="true">
+    <Position X="5.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAABAAAQAIAAACAAAAAAAAAAAAgAAAAABA=</HashCode>
+      <FileName>Model\Interfaces\Movement\IMovementUnit.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

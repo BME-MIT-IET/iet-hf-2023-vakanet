@@ -1,0 +1,31 @@
+﻿<local:CustomWindow
+    x:Class="BaseRPG.View.UIElements.SettingsWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BaseRPG.View.UIElements"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel BorderBrush="White" BorderThickness="2" CornerRadius="0">
+        <local:WindowHeader 
+            XButtonClicked="XButton_Click" 
+            PointerMoved="UserControl_PointerMoved"
+            PointerPressed="UserControl_PointerPressed"
+            PointerReleased="UserControl_PointerReleased"
+            TitleText="Settings">
+            
+        </local:WindowHeader>
+        <Grid>
+            <Canvas Background="#471d09" Opacity="0.7"/>
+            <StackPanel   Padding="20" Spacing="10">
+                <Button x:Name="exitButton" Background="#8a553d" Click="exitButton_Click">Exit</Button>
+                <Rectangle Height="2" Fill="White"></Rectangle>
+                <Button x:Name="bindingsButton" Background="#8a553d" Click="bindingsButton_Click">Key Bindings</Button>
+            </StackPanel>
+        </Grid>
+        
+    </StackPanel>
+</local:CustomWindow>
+
+    

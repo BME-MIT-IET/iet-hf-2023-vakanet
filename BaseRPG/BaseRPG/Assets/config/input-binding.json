@@ -1,0 +1,71 @@
+[
+  {
+    "Input": "W",
+    "Action": "move-forward"
+  },
+  {
+    "Input": "A",
+    "Action": "move-left"
+  },
+  {
+    "Input": "D",
+    "Action": "move-right"
+  },
+  {
+    "Input": "S",
+    "Action": "move-backward"
+  },
+  {
+    "Input": "E",
+    "Action": "skill-1"
+  },
+  {
+    "Input": "Q",
+    "Action": "skill-2"
+  },
+
+  {
+    "Input": "R",
+    "Action": "skill-3"
+  },
+  {
+    "Input": "T",
+    "Action": "skill-4"
+  },
+  {
+    "Input": "Left",
+    "Action": "move-left"
+  },
+  {
+    "Input": "Right",
+    "Action": "move-right"
+  },
+  {
+    "Input": "Up",
+    "Action": "move-forward"
+  },
+  {
+    "Input": "Down",
+    "Action": "move-backward"
+  },
+  {
+    "Input": "MouseLeft",
+    "Action": "light-attack"
+  },
+  {
+    "Input": "MouseLeft",
+    "Action": "initiate-interaction"
+  },
+  {
+    "Input": "MouseRight",
+    "Action": "heavy-attack"
+  },
+  {
+    "Input": "X",
+    "Action": "settings-window"
+  },
+  {
+    "Input": "I",
+    "Action": "inventory-window"
+  }
+]

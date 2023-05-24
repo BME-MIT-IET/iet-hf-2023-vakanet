@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="BaseRPG.Controller.Controller">
+    <Position X="2.75" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQIAAQAQAAEwgAAgABAQESAAgBAAAIAAEAAAADYAA=</HashCode>
+      <FileName>Controller\Controller.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="boolCallbackQueue" />
+      <Field Name="callbackQueue" />
+      <Field Name="imageProvider" />
+      <Field Name="inputHandler" />
+      <Field Name="playerControl" />
+      <Field Name="game" />
+      <Field Name="viewManager" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BaseRPG.Model.Data.BoolCallbackQueue" Collapsed="true">
+    <Position X="8" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAACQAA=</HashCode>
+      <FileName>Model\Data\BoolCallbackQueue.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BaseRPG.Model.Data.CallbackQueue" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAIAIAQAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Model\Data\CallbackQueue.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BaseRPG.Physics.TwoDimensional.Collision.CollisionNotifier2D" Collapsed="true">
+    <Position X="7.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAECAAAAAAAQDAAAAABAAAQAAAgAAAABAAEAAIAAAA=</HashCode>
+      <FileName>Physics\TwoDimensional\Collision\CollisionNotifier2D.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BaseRPG.Controller.Input.InputHandler" Collapsed="true">
+    <Position X="4.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAASgUEAAAwAAAAAAABAGQgAQAAAAEAiAAA=</HashCode>
+      <FileName>Controller\Input\InputHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseRPG.Controller.UnitControl.PlayerControl" Collapsed="true">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAYCAAEEAABAAAAAAAAQAAAAAAAAAAAAgAEAAE=</HashCode>
+      <FileName>Controller\UnitControl\PlayerControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseRPG.Model.Game.Game" Collapsed="true">
+    <Position X="7.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAQAAgAAgAAEABAAAFAAQAAQAEACAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Model\Game\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseRPG.View.ViewManager" Collapsed="true">
+    <Position X="8" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAIABAAAgAAAAJAAAACAECABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ViewManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="BaseRPG.View.Interfaces.IImageProvider" Collapsed="true">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Interfaces\IImageProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

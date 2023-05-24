@@ -1,0 +1,29 @@
+﻿<local:CustomWindow
+    x:Class="BaseRPG.View.UIElements.ItemCollectionUI.InventoryWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BaseRPG.View.UIElements"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:inventory1="using:BaseRPG.View.UIElements.ItemCollectionUI"
+    mc:Ignorable="d">
+
+    <StackPanel BorderBrush="White" BorderThickness="2" CornerRadius="0">
+        <local:WindowHeader
+            XButtonClicked="XButton_Click" 
+            PointerMoved="UserControl_PointerMoved"
+            PointerPressed="UserControl_PointerPressed"
+            PointerReleased="UserControl_PointerReleased"
+            TitleText="Inventory"></local:WindowHeader>
+        <Grid>
+            <Canvas Background="#471d09" Opacity="0.7"/>
+            <StackPanel x:Name="stackPanel" Margin="5">
+                <inventory1:EquippedItemUI x:Name="equippedItemUI"></inventory1:EquippedItemUI>
+                <Rectangle Height="2" Fill="White"></Rectangle>
+                <inventory1:ItemsGrid x:Name="itemsGrid" ></inventory1:ItemsGrid>
+
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+    
+    
+</local:CustomWindow>

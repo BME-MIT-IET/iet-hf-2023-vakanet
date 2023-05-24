@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "BaseRPG (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "BaseRPG (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

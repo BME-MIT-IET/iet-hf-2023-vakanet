@@ -1,0 +1,26 @@
+﻿<uielements:CustomWindow
+    xmlns:uielements="using:BaseRPG.View.UIElements"
+    x:Class="BaseRPG.View.UIElements.ItemCollectionUI.ShopWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BaseRPG.View.UIElements.ItemCollectionUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel BorderBrush="White" BorderThickness="2" CornerRadius="0">
+        <uielements:WindowHeader 
+            XButtonClicked="XButton_Click" 
+            PointerMoved="UserControl_PointerMoved"
+            PointerPressed="UserControl_PointerPressed"
+            PointerReleased="UserControl_PointerReleased"
+            TitleText="Shop">
+
+        </uielements:WindowHeader>
+        <Grid>
+            <Canvas Background="#471d09" Opacity="0.7"/>
+            <local:ItemsGrid x:Name="itemsGrid"></local:ItemsGrid>
+        </Grid>
+
+        </StackPanel>
+</uielements:CustomWindow>

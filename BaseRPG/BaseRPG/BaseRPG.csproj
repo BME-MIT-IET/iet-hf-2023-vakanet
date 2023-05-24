@@ -1,0 +1,188 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>BaseRPG</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>x86;x64;arm64</Platforms>
+    <RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
+    <PublishProfile>win10-$(Platform).pubxml</PublishProfile>
+    <UseWinUI>true</UseWinUI>
+    <EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Controller\NewFolder\**" />
+    <Compile Remove="Model\Interfaces\NewFolder1\**" />
+    <Compile Remove="Model\Tickable\Collectible\**" />
+    <Compile Remove="Tests\**" />
+    <Compile Remove="View\Shapes\**" />
+    <EmbeddedResource Remove="Controller\NewFolder\**" />
+    <EmbeddedResource Remove="Model\Interfaces\NewFolder1\**" />
+    <EmbeddedResource Remove="Model\Tickable\Collectible\**" />
+    <EmbeddedResource Remove="Tests\**" />
+    <EmbeddedResource Remove="View\Shapes\**" />
+    <None Remove="Controller\NewFolder\**" />
+    <None Remove="Model\Interfaces\NewFolder1\**" />
+    <None Remove="Model\Tickable\Collectible\**" />
+    <None Remove="Tests\**" />
+    <None Remove="View\Shapes\**" />
+    <Page Remove="Controller\NewFolder\**" />
+    <Page Remove="Model\Interfaces\NewFolder1\**" />
+    <Page Remove="Model\Tickable\Collectible\**" />
+    <Page Remove="Tests\**" />
+    <Page Remove="View\Shapes\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="View\UIElements\CustomControl\ButtonWithCanvas.xaml" />
+    <None Remove="View\UIElements\CustomWindow.xaml" />
+    <None Remove="View\UIElements\Experience\ExperienceControl.xaml" />
+    <None Remove="View\UIElements\Gold\GoldUI.xaml" />
+    <None Remove="View\UIElements\HealthViewControl.xaml" />
+    <None Remove="View\UIElements\Hud.xaml" />
+    <None Remove="View\UIElements\InventoryWindow.xaml" />
+    <None Remove="View\UIElements\ItemCollectionUI\EquippedItemUI.xaml" />
+    <None Remove="View\UIElements\ItemCollectionUI\ItemsGrid.xaml" />
+    <None Remove="View\UIElements\ItemCollectionUI\ShopWindow.xaml" />
+    <None Remove="View\UIElements\KeyBinding.xaml" />
+    <None Remove="View\UIElements\KeyBindingsWindow.xaml" />
+    <None Remove="View\UIElements\LabelAndCombobox.xaml" />
+    <None Remove="View\UIElements\LabelAndTextBox.xaml" />
+    <None Remove="View\UIElements\SettingsWindow.xaml" />
+    <None Remove="View\UIElements\Spell\SingleSpellUI.xaml" />
+    <None Remove="View\UIElements\Spell\SpellsWindow.xaml" />
+    <None Remove="View\UIElements\WindowHeader.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+    <PackageReference Include="MathNet.Spatial" Version="0.6.0" />
+    <PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.4" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.1.5" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="SimpleInjector" Version="5.4.1" />
+    <PackageReference Include="SimpleInjector.Extensions.LifetimeScoping" Version="4.0.0" />
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <Manifest Include="$(ApplicationManifest)" />
+  </ItemGroup>
+
+  <!-- Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
+       Tools extension to be activated for this project even if the Windows App SDK Nuget
+       package has not yet been restored -->
+  <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnablePreviewMsixTooling)'=='true'">
+    <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\Interfaces\Factories\Enemy\NewFolder\" />
+    <Folder Include="Model\Interfaces\Factories\Hero\" />
+    <Folder Include="Model\Interfaces\ItemInterfaces\" />
+    <Folder Include="Model\Interfaces\WorldInterfaces\NewFolder\" />
+    <Folder Include="Model\Tickable\Item\Weapon\Attacks\" />
+    <Folder Include="Physics\NewFolder\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Windows\WindowHeader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Windows\CustomWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Windows\SettingsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Windows\HealthViewControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Windows\Hud.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Windows\InventoryWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Remove="Model\Tickable\Collectible\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Remove="Controller\NewFolder\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Remove="Tests\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Remove="View\Shapes\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Remove="Model\Interfaces\NewFolder1\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Assets\config\input-binding.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Assets\config\input-binding.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Page Update="View\UIElements\ItemCollectionUI\ShopWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\UIElements\Spell\SingleSpellUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\UIElements\Spell\SpellsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\UIElements\Gold\GoldUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\UIElements\CustomControl\ButtonWithCanvas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\UIElements\Inventory\ItemsGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\UIElements\Inventory\EquippedItemUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Windows\ExperienceControl\ExperienceControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Windows\CustomControl\LabelAndCombobox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Windows\CustomControl\LabelAndTextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Windows\Binding\KeyBinding.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="View\Windows\Binding\KeyBindingsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>

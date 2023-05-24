@@ -1,0 +1,22 @@
+﻿<UserControl
+    x:Class="BaseRPG.View.UIElements.KeyBinding"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BaseRPG.View.UIElements"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid ColumnSpacing="10" Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <local:LabelAndTextBox x:Name="input" LabelText="Input:"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <local:LabelAndCombobox x:Name="action" LabelText="Action:"/>
+        </Grid>
+    </Grid>
+</UserControl>
