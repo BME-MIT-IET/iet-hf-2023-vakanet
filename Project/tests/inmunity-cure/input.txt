@@ -1,0 +1,11 @@
+# setup
+new-field
+new-virologist a 1
+select 2
+
+# test start
+add-effect Chorea
+add-effect Immunity Chorea
+get-effects
+
+exit

@@ -1,0 +1,19 @@
+# setup
+new-field
+new-virologist a 1
+new-virologist b 1
+
+select 3
+add-ingredient Nucleotide 1
+add-effect Paralysis
+
+select 2
+
+# test start
+steal 0 # 3 should become un-Stealable
+inventory # should have the stolen item
+select 3
+inventory # should not have the stolen item, also ingredient with 0 quantity should not exist
+get-stealable # should have nothing
+
+exit

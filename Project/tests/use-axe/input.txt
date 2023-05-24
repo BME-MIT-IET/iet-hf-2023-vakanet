@@ -1,0 +1,13 @@
+# setup
+new-field
+new-virologist a 1
+new-virologist b 1
+select 2
+add-equipment Axe
+
+# test start
+axe 3
+select 3
+get-effects # should have Death
+
+exit

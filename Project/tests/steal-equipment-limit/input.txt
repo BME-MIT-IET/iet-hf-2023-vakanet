@@ -1,0 +1,23 @@
+# setup
+new-field
+new-virologist a 1
+new-virologist b 1
+
+select 3
+add-equipment Bag
+add-effect Paralysis
+
+select 2
+add-equipment Axe
+add-equipment Axe
+add-equipment Axe
+
+# test start
+steal 0 # 3 should become un-Stealable
+inventory # shouldn't have the stolen item because inventory full
+get-effects # shouldn't have the effect
+select 3
+inventory # should have the stolen item
+get-effects # should have the effect and the paralysis
+
+exit
