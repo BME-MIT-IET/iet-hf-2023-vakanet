@@ -27,7 +27,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nuget
       - name: Install packages
-        run: dotnet restore
+        run: dotnet restore ${{ env.Solution_Name }}
       - name: Build
         run: dotnet build ${{ env.Project_Path }}
       - name: Test
