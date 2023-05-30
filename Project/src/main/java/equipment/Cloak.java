@@ -19,6 +19,7 @@ public class Cloak extends Equipment {
      */
     private final Resistance r = new Resistance();
 
+    private static Random random = new Random();
     /**
      * Set the state of all cloaks.
      *
@@ -43,7 +44,7 @@ public class Cloak extends Equipment {
                 success = true;
                 break;
             case RANDOM:
-                success = (new Random()).nextDouble() <= 0.823;
+                success = random.nextDouble() <= 0.823;
                 break;
         }
         return success;
