@@ -11,8 +11,6 @@
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
-    </properties>
-    <properties>
         <sonar.organization>bme-mit-iet-org</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
