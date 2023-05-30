@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Vector;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Stream;
 
 public class Test {
     static final List<String> failed = new Vector<>();
@@ -70,20 +71,26 @@ public class Test {
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        final var tests = Files.list(Paths.get("tests")).filter(Files::isDirectory);
-        var executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
-        tests.forEach(path -> executor.submit(() -> run(path)));
-        executor.shutdown();
-        if (!executor.awaitTermination(60, TimeUnit.SECONDS))
-            throw new RuntimeException("Tests timed out");
+        Stream<Path> tests = null;
+        try{
+            tests = Files.list(Paths.get("tests")).filter(Files::isDirectory);
+            var executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+            tests.forEach(path -> executor.submit(() -> run(path)));
+            executor.shutdown();
+            if (!executor.awaitTermination(60, TimeUnit.SECONDS))
+                throw new RuntimeException("Tests timed out");
 
-        System.out.println();
+            System.out.println();
 
-        if (failed.size() == 0) {
-            System.out.println("All successful!");
-        } else {
-            System.out.println("Failed:");
-            failed.forEach(System.out::println);
+            if (failed.size() == 0) {
+                System.out.println("All successful!");
+            } else {
+                System.out.println("Failed:");
+                failed.forEach(System.out::println);
+            }
+        } finally {
+            if(tests != null)
+                tests.close();
         }
     }
 }
