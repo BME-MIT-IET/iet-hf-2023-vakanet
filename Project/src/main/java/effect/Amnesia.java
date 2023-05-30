@@ -18,9 +18,9 @@ public class Amnesia extends Effect {
     }
 
     @Override
-    public void applyEffect(Virologist v) {
+    public void applyEffect(Virologist ro) {
         // forget all recipes
-        v.getInventory().getRecipes().forEach(r -> v.getInventory().removeRecipe(r));
+        ro.getRecipes().forEach(r -> ro.removeRecipe(r));
     }
 
     @Override

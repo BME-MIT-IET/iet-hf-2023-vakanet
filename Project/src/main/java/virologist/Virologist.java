@@ -3,6 +3,7 @@ package virologist;
 import agent.Agent;
 import agent.Recipe;
 import base.*;
+import base.Timer;
 import city.Field;
 import effect.*;
 import equipment.Axe;
@@ -11,10 +12,7 @@ import equipment.Gloves;
 import gui.Window;
 import gui.game.GameScene;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -375,5 +373,14 @@ public class Virologist implements Updatable {
         GameScene gs = Window.getGameScene();
         if (gs != null && e.getClass() != Stealable.class)
             gs.logAction(message);
+    }
+
+    public Collection<Recipe> getRecipes() {
+        return getInventory().getRecipes();
+    }
+
+
+    public void removeRecipe(Recipe recipe) {
+        getInventory().removeRecipe(recipe);
     }
 }
