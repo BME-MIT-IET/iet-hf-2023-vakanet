@@ -40,7 +40,6 @@ public class FieldStepDefinitions {
 
         hashmap.put(effect,recipe);
         hashmap.put(laboratory,new Laboratory(recipe));
-
     }
 
     @Given ("create object {string} on field {string}")
