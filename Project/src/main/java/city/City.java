@@ -37,10 +37,16 @@ public class City {
         if (neighbors.size() == 0) return true;
 
         // BFS
-        var queue = new LinkedList<>(List.of(neighbors.keySet().stream().findFirst().get()));
+        var first = neighbors.keySet().stream().findFirst();
+        if (first.isEmpty())
+        {
+            throw new IllegalStateException("No first element found in the key set of neighbors.");
+        }
+
+        var queue = new LinkedList<>(List.of(first.get()));
         var visited = new HashSet<>();
 
-        while (queue.size() != 0) {
+        while (!queue.isEmpty()) {
             var f = queue.remove(0);
             if (visited.contains(f)) continue;
 
