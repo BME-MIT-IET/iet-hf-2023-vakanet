@@ -73,10 +73,8 @@ public class Test {
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        Stream<Path> tests = null;
         ExecutorService executor = null;
-        try{
-            tests = Files.list(Paths.get("tests")).filter(Files::isDirectory);
+        try (Stream<Path> tests = Files.list(Paths.get("tests")).filter(Files::isDirectory)) {
             executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
             ExecutorService finalExecutor = executor;
@@ -94,9 +92,7 @@ public class Test {
                 failed.forEach(System.out::println);
             }
         } finally {
-            if(tests != null)
-                tests.close();
-            if(executor != null)
+            if (executor != null)
                 executor.shutdown();
         }
     }
