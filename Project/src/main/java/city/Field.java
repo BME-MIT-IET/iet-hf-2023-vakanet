@@ -82,6 +82,7 @@ public class Field {
      * @param v the virologist to give the item to
      */
     public void addItemTo(Virologist v) {
+        // Intentionally left blank by default
     }
 
     /**

@@ -40,7 +40,6 @@ public abstract class Effect {
             // create an instance of the effect and return it
             return effect.getDeclaredConstructor().newInstance();
         } catch (Exception e) {
-            e.printStackTrace();
             throw new RuntimeException("Something went very wrong");
         }
     }

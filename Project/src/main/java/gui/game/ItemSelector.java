@@ -19,19 +19,17 @@ public class ItemSelector extends Selector<Item> {
         this.currentVirologist = currentVirologist;
 
         var stealable = currentField.getStealable();
-        for (int i = 0; i < stealable.size(); i++) {
-            comboBox.addItem(stealable.get(i).getKey());
-            textArea.append(stealable.get(i) + "\n");
+        for (var itemVirologistSimpleEntry : stealable) {
+            comboBox.addItem(itemVirologistSimpleEntry.getKey());
+            textArea.append(itemVirologistSimpleEntry + "\n");
         }
         comboBox.setRenderer(new DefaultListCellRenderer() {
-
             @Override
             public Component getListCellRendererComponent(JList<?> list,
                                                           Object value,
                                                           int index,
                                                           boolean isSelected,
                                                           boolean cellHasFocus) {
-                value = value;
                 return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
             }
         });
@@ -45,9 +43,9 @@ public class ItemSelector extends Selector<Item> {
 
     public Virologist getTarget() {
         var stealable = currentField.getStealable();
-        for (int i = 0; i < stealable.size(); i++) {
-            if (stealable.get(i).getKey().equals(getSelectedItem()))
-                return stealable.get(i).getValue();
+        for (var itemVirologistSimpleEntry : stealable) {
+            if (itemVirologistSimpleEntry.getKey().equals(getSelectedItem()))
+                return itemVirologistSimpleEntry.getValue();
         }
         return null;
     }

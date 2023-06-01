@@ -17,7 +17,7 @@ public class EquipmentSet implements ItemCollection<Equipment> {
     /**
      * Capacity of collection.
      */
-    final static int capacity = 3;
+    final static int CAPACITY = 3;
     /**
      * Collection of Equipments.
      */
@@ -25,8 +25,8 @@ public class EquipmentSet implements ItemCollection<Equipment> {
 
     @Override
     public void add(Equipment item) {
-        if (equipments.size() >= capacity) {
-            throw new GameException("Can't have more than " + capacity + " equipments!");
+        if (equipments.size() >= CAPACITY) {
+            throw new GameException("Can't have more than " + CAPACITY + " equipments!");
         }
 
         equipments.add(item);
