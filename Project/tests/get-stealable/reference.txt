@@ -1,9 +1,0 @@
-Field#1
-a#2
-a#2
-Collected AminoAcid [0-9]+
-Collected Axe#[0-9]+
-Applied Paralysis.*
-Applied Stealable.*
-0. Axe#[0-9]+ a#2
-1. AminoAcid [0-9]+ a#2

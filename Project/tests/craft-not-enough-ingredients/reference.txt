@@ -1,5 +1,0 @@
-Field#1
-a#2
-a#2
-Collected Paralysis recipe#[0-9]+
-AminoAcid [0-9]+ is required

@@ -1,9 +1,0 @@
-# setup
-new-field
-new-virologist a 1
-select 2
-
-# test start
-craft virus 3 # unknown recipe
-
-exit

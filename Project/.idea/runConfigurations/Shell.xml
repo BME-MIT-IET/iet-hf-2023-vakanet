@@ -1,9 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Shell" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="shell.Shell" />
-    <module name="Projlab" />
-    <method v="2">
-      <option name="Make" enabled="true" />
-    </method>
-  </configuration>
-</component>
