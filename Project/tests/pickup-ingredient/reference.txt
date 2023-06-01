@@ -1,0 +1,8 @@
+Warehouse#2
+a#3
+a#3
+Collected Nucleotide 1
+Equipments:\s*
+Ingredients: Nucleotide 1\s*
+Recipes:\s*
+Agents:\s*

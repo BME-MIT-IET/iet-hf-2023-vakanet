@@ -1,0 +1,10 @@
+# setup
+new-field
+new-virologist a 1
+select 2
+add-effect Paralysis
+
+# test start
+collect # not allowed when paralyzed
+
+exit

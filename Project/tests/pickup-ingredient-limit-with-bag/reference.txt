@@ -1,0 +1,10 @@
+Warehouse#2
+a#3
+a#3
+Collected Bag#[0-9]+
+Applied Extra Capacity#[0-9]+ to a#3
+Collected Nucleotide 200
+Equipments: Bag#[0-9]+\s*
+Ingredients: Nucleotide 200\s*
+Recipes:\s*
+Agents:\s*

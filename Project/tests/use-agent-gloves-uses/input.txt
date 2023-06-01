@@ -1,0 +1,27 @@
+# setup
+new-field
+new-virologist a 1
+new-virologist b 1
+
+select 2
+add-recipe Amnesia
+add-agent virus Amnesia
+add-agent virus Amnesia
+add-agent virus Amnesia
+add-agent virus Amnesia
+
+select 3
+add-equipment Gloves
+
+select 2
+
+# test start
+use 8 3 # use gloves, a forgets recipes
+use 9 3 # use gloves
+use 10 3 # use gloves
+use 11 3 # no more uses, successful attack
+
+select 3
+get-effects # should have Repelling only, Amnesia is a one-time thing
+
+exit

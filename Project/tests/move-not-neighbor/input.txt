@@ -1,0 +1,11 @@
+# setup
+new-field
+new-field
+new-virologist a 1
+select 3
+
+# test start
+move 2
+# field is not a neighbor
+
+exit

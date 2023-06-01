@@ -1,0 +1,5 @@
+Field#1
+Field#2
+a#3
+a#3
+Field#2 is not a neighboring field, can't move there

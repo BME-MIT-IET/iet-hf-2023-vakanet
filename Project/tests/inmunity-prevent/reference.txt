@@ -1,0 +1,6 @@
+Field#[0-9]+
+a#[0-9]+
+a#[0-9]+
+Applied Chorea immunity#-[0-9]+ \([0-9]+ s\) to a#[0-9]+
+a#[0-9]+ is immune to Chorea#[0-9]+ \([0-9]+ s\)
+Chorea immunity#-[0-9]+ \([0-9]+ s\)
