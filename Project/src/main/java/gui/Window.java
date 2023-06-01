@@ -112,7 +112,9 @@ public class Window extends JFrame {
         }
         if (scene.equals(Scene.GAME)) {
             GameScene gameScene = (GameScene) activeScene;
-            gameScene.limitSplitPaneSize();
+            if (gameScene != null) {
+                gameScene.limitSplitPaneSize();
+            }
         }
     }
 
