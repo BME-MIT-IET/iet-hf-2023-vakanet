@@ -253,7 +253,6 @@ public class Shell {
             try {
                 Thread.sleep(millis);
             } catch (InterruptedException e) {
-                e.printStackTrace();
                 Thread.currentThread().interrupt();
             }
         });

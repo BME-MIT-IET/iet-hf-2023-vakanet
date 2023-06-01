@@ -54,9 +54,8 @@ public class GameScene extends JPanel implements ActionListener {
     public GameScene(City city, ArrayList<String> playerNames) {
         try {
             initializeComponents();
-        } catch (Exception e) {
+        } catch (Exception ignored) {
             // Big problem :)
-            e.printStackTrace();
         }
         players = city.spawnPlayers(playerNames);
         topLabel.setText("Current player: " + players.get(playerID).getCharacterName() + " - Actions remaining: " + actionsRemaining);
@@ -276,16 +275,14 @@ public class GameScene extends JPanel implements ActionListener {
     }
 
     private void loadBackground(String fileName) {
-        Image bgimg;
+        Image backgroundImage;
         try {
-            bgimg = ImageIO.read(new File("res", fileName));
-            bgimg = bgimg.getScaledInstance(1280, 720, Image.SCALE_SMOOTH);
-            background.setIcon(new ImageIcon(bgimg));
+            backgroundImage = ImageIO.read(new File("res", fileName));
+            backgroundImage = backgroundImage.getScaledInstance(1280, 720, Image.SCALE_SMOOTH);
+            background.setIcon(new ImageIcon(backgroundImage));
             background.setBounds(0, 0, gamePanel.getWidth(), gamePanel.getHeight());
             background.setMinimumSize(new Dimension(0,0));
         }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
+        catch (IOException ignored) {}
     }
 }
