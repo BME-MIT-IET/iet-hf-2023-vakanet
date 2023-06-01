@@ -5,10 +5,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.stream.Stream;
 
 public class Test {
@@ -73,27 +70,24 @@ public class Test {
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        ExecutorService executor = null;
         try (Stream<Path> tests = Files.list(Paths.get("tests")).filter(Files::isDirectory)) {
-            executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
-
-            ExecutorService finalExecutor = executor;
-            tests.forEach(path -> finalExecutor.submit(() -> run(path)));
-            executor.shutdown();
-            if (!executor.awaitTermination(60, TimeUnit.SECONDS))
-                throw new RuntimeException("Tests timed out");
-
-            System.out.println();
-
-            if (failed.size() == 0) {
-                System.out.println("All successful!");
-            } else {
-                System.out.println("Failed:");
-                failed.forEach(System.out::println);
-            }
-        } finally {
-            if (executor != null)
+            try (var executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors())) {
+                tests.forEach(path -> executor.submit(() -> run(path)));
                 executor.shutdown();
+
+                if (!executor.awaitTermination(60, TimeUnit.SECONDS)) {
+                    throw new RuntimeException("Tests timed out");
+                }
+
+                System.out.println();
+
+                if (failed.isEmpty()) {
+                    System.out.println("All successful!");
+                } else {
+                    System.out.println("Failed:");
+                    failed.forEach(System.out::println);
+                }
+            }
         }
     }
 }
