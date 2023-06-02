@@ -25,6 +25,8 @@ public class City {
      */
     final Map<Id, Virologist> virologists = new HashMap<>();
 
+
+    private final Random rand = new Random();
     /**
      * Check if a graph given defined with edges is a connected graph.
      *
@@ -35,10 +37,16 @@ public class City {
         if (neighbors.size() == 0) return true;
 
         // BFS
-        var queue = new LinkedList<>(List.of(neighbors.keySet().stream().findFirst().get()));
+        var first = neighbors.keySet().stream().findFirst();
+        if (first.isEmpty())
+        {
+            throw new IllegalStateException("No first element found in the key set of neighbors.");
+        }
+
+        var queue = new LinkedList<>(List.of(first.get()));
         var visited = new HashSet<>();
 
-        while (queue.size() != 0) {
+        while (!queue.isEmpty()) {
             var f = queue.remove(0);
             if (visited.contains(f)) continue;
 
@@ -55,8 +63,6 @@ public class City {
      */
     public void random() {
         if (fields.size() != 0) throw new GameException("Fields were already initialized");
-
-        var rand = new Random();
 
         // create laboratories
         var effects = new ArrayList<>(List.of("Amnesia", "Chorea", "Paralysis"));
@@ -170,13 +176,12 @@ public class City {
     }
 
     public ArrayList<Virologist> spawnPlayers(ArrayList<String> players) {
-        Random rnd = new Random();
         ArrayList<Virologist> virologists = new ArrayList<>();
-        int index = rnd.nextInt(fields.size());
+        int index = rand.nextInt(fields.size());
         for (int i = 0; i < players.size(); i++) {
             var fieldArray = fields.values().toArray();
             while (fieldArray[index] instanceof BearVirusLaboratory)
-                index = rnd.nextInt(fields.size());
+                index = rand.nextInt(fields.size());
 
             Field field = (Field) fieldArray[index];
 

@@ -35,7 +35,6 @@ public class RecipeSelector extends Selector<Recipe> {
                                                               int index,
                                                               boolean isSelected,
                                                               boolean cellHasFocus) {
-                    value = value;
                     return super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
                 }
             });

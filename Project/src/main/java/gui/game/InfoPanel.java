@@ -39,12 +39,10 @@ public class InfoPanel extends JPanel implements ComponentListener, HierarchyLis
         StyledDocument doc = logInfo.getStyledDocument();
         doc.putProperty(DefaultEditorKit.EndOfLineStringProperty, "\n");
 
-        //TODO change styling
         try {
             doc.insertString(doc.getLength(), action + "\n", null);
-        } catch (BadLocationException ex) {
-            ex.printStackTrace();
-        }
+        } catch (BadLocationException ignored) {}
+
         logInfo.repaint();
         logInfo.revalidate();
     }

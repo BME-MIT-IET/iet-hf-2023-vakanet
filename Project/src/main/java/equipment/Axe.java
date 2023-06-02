@@ -36,12 +36,12 @@ public class Axe extends Equipment {
 
     @Override
     void applyEffect(Virologist v) {
-
+        // Empty override on purpose
     }
 
     @Override
     void removeEffect(Virologist v) {
-
+        // Empty override on purpose
     }
 
     @Override

@@ -13,12 +13,13 @@ import gui.Window;
 import gui.game.GameScene;
 
 import java.util.*;
+
 import java.util.stream.Collectors;
 
 /**
  * Class representing an in-game player.
  */
-public class Virologist implements Updatable {
+public class Virologist implements Updatable, Serializable {
     /**
      * The list of Effects currently applied to the Virologist.
      */
@@ -34,6 +35,8 @@ public class Virologist implements Updatable {
      */
     private final Inventory inventory = new Inventory();
 
+
+    private final Random random = new Random();
     /**
      * Unique id of the virologist.
      */
@@ -302,7 +305,7 @@ public class Virologist implements Updatable {
         var available = field.getNeighbours();
         if (available.size() == 0) return;
 
-        var f = available.get(new Random().nextInt(available.size()));
+        var f = available.get(random.nextInt(available.size()));
         field.move(this, f);
     }
 
