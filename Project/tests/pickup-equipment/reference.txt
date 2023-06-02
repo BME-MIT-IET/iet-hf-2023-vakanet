@@ -1,0 +1,9 @@
+Shelter#3
+a#4
+a#4
+Collected Bag#[0-9]+
+Applied Extra Capacity#[0-9]+ to a#4
+Equipments: Bag#[0-9]+\s*
+Ingredients:\s*
+Recipes:\s*
+Agents:\s*

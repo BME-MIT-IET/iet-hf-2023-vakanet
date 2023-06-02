@@ -1,0 +1,13 @@
+# setup
+new-field
+new-virologist a 1
+select 2
+add-recipe Paralysis
+add-ingredient AminoAcid 100
+add-ingredient Nucleotide 100
+
+# test start
+craft virus 5
+inventory # should have the agent
+
+exit

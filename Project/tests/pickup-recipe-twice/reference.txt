@@ -1,0 +1,8 @@
+Laboratory#5
+a#6
+a#6
+Collected Paralysis recipe#[0-9]+
+Equipments:\s*
+Ingredients:\s*
+Recipes: Paralysis recipe#[0-9]+\s*
+Agents:\s*

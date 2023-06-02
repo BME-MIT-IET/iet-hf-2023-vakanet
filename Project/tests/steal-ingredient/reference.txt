@@ -1,0 +1,20 @@
+Field#1
+a#2
+b#3
+b#3
+Collected Nucleotide 1
+Applied Paralysis.*
+Applied Stealable.*
+a#2
+Removed Stealable#[0-9]+ \([0-9]+ s\) from b#3
+Collected Nucleotide 1
+Removed Nucleotide 0
+Equipments:\s*
+Ingredients: Nucleotide 1\s*
+Recipes:\s*
+Agents:\s*
+b#3
+Equipments:\s*
+Ingredients:\s*
+Recipes:\s*
+Agents:\s*

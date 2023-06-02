@@ -1,0 +1,13 @@
+Field#1
+a#2
+b#3
+a#2
+Paralysis virus#[0-9]+ \([0-9]+ s\) created
+Collected Paralysis virus#[0-9]+ \([0-9]+ s\)
+Removed Paralysis virus#[0-9]+ \([0-9]+ s\)
+Applied Paralysis#[0-9]+ \([0-9]+ s\) to b#3
+Applied Stealable#[0-9]+ \([0-9]+ s\) to b#3
+Paralysis virus#[0-9]+ \([0-9]+ s\) applied to b#3
+b#3
+Paralysis#[0-9]+ \([0-9]+ s\)
+Stealable#[0-9]+ \([0-9]+ s\)

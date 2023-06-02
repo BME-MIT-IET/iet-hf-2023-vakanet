@@ -1,0 +1,12 @@
+# setup
+new-shelter Bag
+new-virologist a 3
+select 4
+add-equipment Bag
+add-equipment Bag
+add-equipment Bag
+
+# test start
+collect
+
+exit

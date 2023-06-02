@@ -1,0 +1,11 @@
+# setup
+new-field
+new-virologist a 1
+select 2
+add-agent virus Paralysis
+
+# test start
+use 3 2
+get-effects # should have Paralysis and Stealable
+
+exit

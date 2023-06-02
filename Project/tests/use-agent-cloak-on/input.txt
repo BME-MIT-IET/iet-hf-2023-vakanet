@@ -1,0 +1,17 @@
+# setup
+new-field
+new-virologist a 1
+new-virologist b 1
+select 2
+add-agent virus Paralysis
+select 3
+add-equipment Cloak
+set-cloak ON
+select 2
+
+# test start
+use 4 3
+select 3
+get-effects # should have Resistance only
+
+exit

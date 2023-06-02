@@ -1,0 +1,8 @@
+# setup
+new-laboratory Chorea
+new-virologist a 5
+select 6
+start-game
+
+# test start
+collect

@@ -1,0 +1,11 @@
+# setup
+new-laboratory Paralysis
+new-virologist a 5
+select 6
+
+# test start
+collect
+collect # nothing should happen
+inventory # should have the recipe once
+
+exit

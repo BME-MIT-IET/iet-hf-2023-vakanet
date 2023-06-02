@@ -1,0 +1,11 @@
+# setup
+new-field
+new-virologist a 1
+select 2
+add-recipe Paralysis
+add-effect Paralysis
+
+# test start
+craft virus 3 # not allowed when paralyzed
+
+exit
