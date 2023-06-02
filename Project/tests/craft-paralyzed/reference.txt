@@ -1,7 +1,0 @@
-Field#1
-a#2
-a#2
-Collected Paralysis recipe#[0-9]+
-Applied Paralysis#[0-9]+ \([0-9]+ s\) to a#2
-Applied Stealable#[0-9]+ \([0-9]+ s\) to a#2
-a#2 is paralyzed
