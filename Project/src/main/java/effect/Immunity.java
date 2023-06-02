@@ -16,6 +16,8 @@ public class Immunity extends UpdatableEffect {
      * The Id of the effect which the immunity is against.
      */
     private final Id id;
+    
+    private final Id effectId;
 
     public Immunity() {
         super("");
