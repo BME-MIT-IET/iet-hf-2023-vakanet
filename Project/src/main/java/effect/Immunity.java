@@ -21,6 +21,12 @@ public class Immunity extends UpdatableEffect {
      */
     private final Id effectId;
 
+    public Immunity() {
+        super("");
+        effectId = new Id();
+        effect = null;
+    }
+
     public Immunity(Class<? extends Effect> effect) {
         super("");
         this.effect = effect;
