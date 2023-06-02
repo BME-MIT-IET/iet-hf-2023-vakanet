@@ -22,6 +22,7 @@ public class Immunity extends UpdatableEffect {
     public Immunity() {
         super("");
         effectId = new Id();
+        id = effectId;
         effect = null;
     }
 
@@ -31,6 +32,7 @@ public class Immunity extends UpdatableEffect {
         var instance = Effect.getInstance(effect);
         this.name = instance.name + " immunity";
         id = instance.getId().getNegative();
+        effectId = id;
     }
 
     @Override
