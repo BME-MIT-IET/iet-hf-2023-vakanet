@@ -11,6 +11,7 @@ import equipment.Cloak;
 import equipment.Gloves;
 import gui.Window;
 import gui.game.GameScene;
+import java.io.Serializable;
 
 import java.util.*;
 
