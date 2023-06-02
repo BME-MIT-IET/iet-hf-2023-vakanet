@@ -10,7 +10,10 @@ public class Nucleotide extends Ingredient {
      * The unique if of Nucleotide
      */
     private static final Id id = new Id();
+    public Nucleotide() {
+        this(0);
 
+    }
     public Nucleotide(int quantity) {
         super("Nucleotide", quantity);
     }

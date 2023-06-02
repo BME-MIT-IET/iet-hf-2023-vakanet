@@ -32,7 +32,7 @@ public abstract class Ingredient extends Item {
      *
      * @param quantity the amount to increase with
      */
-    void add(int quantity) {
+    public void add(int quantity) {
         this.quantity += quantity;
     }
 

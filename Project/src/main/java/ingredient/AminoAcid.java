@@ -11,6 +11,10 @@ public class AminoAcid extends Ingredient {
      */
     private static final Id id = new Id();
 
+    public AminoAcid() {
+        this(0);
+
+    }
     public AminoAcid(int quantity) {
         super("AminoAcid", quantity);
     }

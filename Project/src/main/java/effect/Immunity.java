@@ -16,6 +16,15 @@ public class Immunity extends UpdatableEffect {
      * The Id of the effect which the immunity is against.
      */
     private final Id id;
+    
+    private final Id effectId;
+
+    public Immunity() {
+        super("");
+        effectId = new Id();
+        id = effectId;
+        effect = null;
+    }
 
     public Immunity(Class<? extends Effect> effect) {
         super("");
@@ -23,6 +32,7 @@ public class Immunity extends UpdatableEffect {
         var instance = Effect.getInstance(effect);
         this.name = instance.name + " immunity";
         id = instance.getId().getNegative();
+        effectId = id;
     }
 
     @Override
