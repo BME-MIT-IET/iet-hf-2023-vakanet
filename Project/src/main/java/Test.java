@@ -71,24 +71,22 @@ public class Test {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         try (Stream<Path> tests = Files.list(Paths.get("tests")).filter(Files::isDirectory)) {
-            try(var executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors())){
-                tests.forEach(path -> executor.submit(() -> run(path)));
-                executor.shutdown();
+            var executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+            tests.forEach(path -> executor.submit(() -> run(path)));
+            executor.shutdown();
 
-                if (!executor.awaitTermination(60, TimeUnit.SECONDS)) {
-                    throw new RuntimeException("Tests timed out");
-                }
-
-                System.out.println();
-
-                if (failed.isEmpty()) {
-                    System.out.println("All successful!");
-                } else {
-                    System.out.println("Failed:");
-                    failed.forEach(System.out::println);
-                }
+            if (!executor.awaitTermination(60, TimeUnit.SECONDS)) {
+                throw new RuntimeException("Tests timed out");
             }
 
+            System.out.println();
+
+            if (failed.isEmpty()) {
+                System.out.println("All successful!");
+            } else {
+                System.out.println("Failed:");
+                failed.forEach(System.out::println);
+            }
         }
     }
 }

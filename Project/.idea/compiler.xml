@@ -10,5 +10,8 @@
         <module name="Vakanet" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Projlab" target="18" />
+    </bytecodeTargetLevel>
   </component>
 </project>
